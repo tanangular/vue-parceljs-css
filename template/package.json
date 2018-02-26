@@ -1,0 +1,45 @@
+{
+  "name": "{{ name }}",
+  "version": "1.0.0",
+  "description": "{{ description }}",
+  "scripts": {
+    "dev": "rm -rf .cache && rm -rf dist && NODE_ENV=development parcel -p 8080 ./index.html",
+    "build": "rm -rf .cache && rm -rf dist && NODE_ENV=production parcel build ./index.html --public-url /"
+  },
+  "keywords": ["{{keywords}}"],
+  "author": "{{ author }}",
+  "license": "{{ license }}",
+  "private": true,
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "dependencies": {
+    "vue": "^2.5.13",
+    {{#if_eq css "bootstrap"}}
+    "bootstrap": "^4.0.0"
+    {{/if_eq}}
+    {{#if_eq css "bulma"}}
+    "bulma": "^0.6.2"
+    {{/if_eq}}
+    {{#if_eq css "uikit"}}
+    "uikit": "^3.0.0-beta.40"
+    {{/if_eq}}
+    {{#if_eq css "zurb-foundation-5"}}
+    "zurb-foundation-5": "^5.4.7"
+    {{/if_eq}}
+    {{#if_eq css "tailwind"}}
+    "tailwind": "^2.0.4"
+    {{/if_eq}}
+    {{#if_eq css "tachyons"}}
+    "tachyons": "^4.9.1"
+    {{/if_eq}}
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.6.2",
+    {{#if sass}}
+    "node-sass": "^4.7.2"
+    {{/if}}
+  }
+}

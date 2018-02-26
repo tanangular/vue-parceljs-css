@@ -1,0 +1,15 @@
+{
+  "name": "vue-parceljs-css",
+  "version": "1.0.0",
+  "description": "A full-featured parcel setup with hot-reload, chosen css framwork and customize by sass/scss",
+  "main": "meta.js",
+  "dependencies": {
+    "fs-extra": "^5.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+  },
+  "keywords": ["parceljs", "bundeler", "zero config", "0CJS", "sass", "scss", "framework", "bootstrap", "uikit", "zurb foundatio 5", "tachyons", "tailwind"],
+  "author": "tanangular <tanangular@gmail.com>",
+  "license": "MIT"
+}
