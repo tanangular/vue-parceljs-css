@@ -13,24 +13,27 @@ exports.installDependencies = function installDependencies (
   executable = 'npm',
   color
 ) {
-  log(`\n\n# ${color('Installing project dependencies ...')}`)
-  log('# ========================\n')
+  log(`
+  # ${color('Installing project dependencies ...')}
+  # ================================
+
+  `)
   return runCommand(executable, ['install'], {
-    cwd,
+    cwd
   })
 }
 
-exports.copy = async function copy (src, dest) {
+exports.copy = function copy (src, dest) {
   try {
-    await fs.copy(src, dest)
+    fs.copySync(src, dest)
     log('success!')
   } catch (err) {
     console.error(err)
   }
 }
-exports.remove = async function remove (dest) {
+exports.remove = function remove (dest) {
   try {
-    await fs.remove(dest)
+    fs.removeSync(dest)
     log(`remove ${dest} successfully !!`)
   } catch (err) {
     console.error(err)

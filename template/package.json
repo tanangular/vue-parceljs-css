@@ -16,30 +16,30 @@
     "not ie <= 8"
   ],
   "dependencies": {
-    "vue": "^2.5.13",
     {{#if_eq css "bootstrap"}}
-    "bootstrap": "^4.0.0"
+    "bootstrap": "^4.0.0",
     {{/if_eq}}
     {{#if_eq css "bulma"}}
-    "bulma": "^0.6.2"
+    "bulma": "^0.6.2",
     {{/if_eq}}
     {{#if_eq css "uikit"}}
-    "uikit": "^3.0.0-beta.40"
+    "uikit": "^3.0.0-beta.40",
     {{/if_eq}}
     {{#if_eq css "zurb-foundation-5"}}
-    "zurb-foundation-5": "^5.4.7"
+    "zurb-foundation-5": "^5.4.7",
     {{/if_eq}}
     {{#if_eq css "tailwind"}}
-    "tailwind": "^2.0.4"
+    "tailwind": "^2.0.4",
     {{/if_eq}}
     {{#if_eq css "tachyons"}}
-    "tachyons": "^4.9.1"
+    "tachyons": "^4.9.1",
     {{/if_eq}}
+    "vue": "^2.5.13"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.6.2",
     {{#if sass}}
-    "node-sass": "^4.7.2"
+    "node-sass": "^4.7.2",
     {{/if}}
+    "parcel-bundler": "^1.6.2"
   }
 }

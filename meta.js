@@ -1,6 +1,6 @@
 const path = require('path')
 const log = console.log
-const cssTemplateFolder = './css_template'
+const cssTemplateFolder = 'css_template'
 
 const {
   installDependencies,
@@ -31,17 +31,7 @@ module.exports = {
       required: true,
       message: 'Author'
     },
-    /*cdn: {
-      type: 'list',
-      message: 'Select which vue CDN',
-      choices: [
-        {
-          name: 'Vue jsdelivr (https://cdn.jsdelivr.net/npm/vue)',
-          value: 'https://cdn.jsdelivr.net/npm/vue'
-        }
-      ]
-    },*/
-    css: {
+    cssFramework: {
       type: 'list',
       message: 'Select which CSS Framework to install',
       choices: [
@@ -107,14 +97,14 @@ module.exports = {
     const green = chalk.green
     const red = chalk.red
     const cwd = path.join(process.cwd(), data.inPlace ? '' : data.destDirName)
-
+    
     if (data.autoInstall) {
       installDependencies(cwd, data.autoInstall, green)
         .then(() => {
-          copy(`./${cssTemplateFolder}/${data.css}`, './src/assets/scss/')
+          copy(`${cwd}/${cssTemplateFolder}/${data.cssFramework}`, `${cwd}/src/assets/scss/`)
         })
         .then(() => {
-          // remove(`./${cssTemplateFolder}`)
+          remove(`${cwd}/${cssTemplateFolder}`)
         })
         .catch(e => {
           log(red('Error:'), e)
