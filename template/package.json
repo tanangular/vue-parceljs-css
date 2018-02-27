@@ -34,12 +34,16 @@
     {{#if_eq css "tachyons"}}
     "tachyons": "^4.9.1",
     {{/if_eq}}
-    "vue": "^2.5.13"
+    "parcel-plugin-vue": "^1.5.0",
+    "vue": "~2"
   },
   "devDependencies": {
     {{#if sass}}
     "node-sass": "^4.7.2",
     {{/if}}
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "vue-template-compiler": "~2",
     "parcel-bundler": "^1.6.2"
   }
 }
