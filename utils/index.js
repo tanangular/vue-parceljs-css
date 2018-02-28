@@ -1,4 +1,3 @@
-const path = require('path')
 const fs = require('fs-extra')
 const spawn = require('child_process').spawn
 const log = console.log
@@ -15,7 +14,7 @@ exports.installDependencies = function installDependencies (
 ) {
   log(`
   # ${color('Installing project dependencies ...')}
-  # ================================
+  # ======================================
 
   `)
   return runCommand(executable, ['install'], {
@@ -34,7 +33,6 @@ exports.copy = function copy (src, dest) {
 exports.remove = function remove (dest) {
   try {
     fs.removeSync(dest)
-    log(`remove ${dest} successfully !!`)
   } catch (err) {
     console.error(err)
   }
