@@ -16,22 +16,22 @@
     "not ie <= 8"
   ],
   "dependencies": {
-    {{#if_eq css "bootstrap"}}
+    {{#if_eq cssFramework "bootstrap"}}
     "bootstrap": "^4.0.0",
     {{/if_eq}}
-    {{#if_eq css "bulma"}}
+    {{#if_eq cssFramework "bulma"}}
     "bulma": "^0.6.2",
     {{/if_eq}}
-    {{#if_eq css "uikit"}}
+    {{#if_eq cssFramework "uikit"}}
     "uikit": "^3.0.0-beta.40",
     {{/if_eq}}
-    {{#if_eq css "zurb-foundation-5"}}
+    {{#if_eq cssFramework "zurb-foundation-5"}}
     "zurb-foundation-5": "^5.4.7",
     {{/if_eq}}
-    {{#if_eq css "tailwind"}}
+    {{#if_eq cssFramework "tailwind"}}
     "tailwind": "^2.0.4",
     {{/if_eq}}
-    {{#if_eq css "tachyons"}}
+    {{#if_eq cssFramework "tachyons"}}
     "tachyons": "^4.9.1",
     {{/if_eq}}
     "parcel-plugin-vue": "^1.5.0",

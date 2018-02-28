@@ -97,7 +97,7 @@ module.exports = {
     const green = chalk.green
     const red = chalk.red
     const cwd = path.join(process.cwd(), data.inPlace ? '' : data.destDirName)
-    
+    log(data)
     if (data.autoInstall) {
       installDependencies(cwd, data.autoInstall, green)
         .then(() => {

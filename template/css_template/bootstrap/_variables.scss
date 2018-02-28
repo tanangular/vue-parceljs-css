@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:400,500');
+$font-family-base: 'Kanit';
+$color1: #73b785;
+
+$input-bg: #fefefe;
+$enable-rounded: false;
+$body-bg: #fefefe;
+$primary: $color1 !default;
+
+#app {
+  text-align: center
+}
